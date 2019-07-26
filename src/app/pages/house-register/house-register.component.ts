@@ -13,11 +13,11 @@ export class HouseRegisterComponent implements OnInit {
   }
 
 }
-export class MyFileUploadComponent{
-  onFileChanged(Event){
-      const file = event.target.files[0]
-  }
-  onUpload(){
+//export class MyFileUploadComponent{
+ // onFileChanged(Event){
+      // const file = event.target.files[0]
+  //}
+  //onUpload(){
     // upload code goes here
-  }
-}
+  //}
+//}
