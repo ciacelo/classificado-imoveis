@@ -59,7 +59,7 @@ export class UserRegisterComponent {
       email: ['', [Validators.email, Validators.required]],
       password: ['', [Validators.required]],
       confirm: ['', [this.confirmValidator]],
-      comment: ['', [Validators.required]]
+     
     });
   }
 }
