@@ -1,16 +1,14 @@
 <nz-layout class="layout">
-  <nz-header>
-    <div class="logo"></div>
-    <ul nz-menu nzTheme="dark" nzMode="horizontal">
-      <li nz-menu-item routerLink="/home" routerLinkActive="active">inicio</li>
-      <li nz-menu-item>Categoria</li>
-      <li nz-menu-item>Cadastre-se</li>
-    </ul>
-  </nz-header>
+  
   <nz-content>
     <div class="inner-content">
         <router-outlet>Content of page</router-outlet>
     </div>
   </nz-content>
+  <nz-content>
+    <router-outlet></router-outlet>
+  </nz-content>
+  
+
   <nz-footer>Ant Design ©2019 Implement By Angular</nz-footer>
 </nz-layout>

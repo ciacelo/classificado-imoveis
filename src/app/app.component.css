@@ -9,11 +9,18 @@
 }
 
 .logo {
+<<<<<<< HEAD
   width: 100px;
   height: 31px;
   background: rgba(255, 255, 255, 0.2);
   margin: 16px 24px 16px 0;
   background-image: url(../assets/refinar-busca.png) center no-repeat;
+=======
+  width: 120px;
+  height: 31px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px 24px 16px 0;
+>>>>>>> af8010ccfbe556b81a16b88bfd98bd5e8a38fd62
   float: left;
 }
 
