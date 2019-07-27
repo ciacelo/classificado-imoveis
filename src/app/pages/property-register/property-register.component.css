@@ -1,0 +1,21 @@
+[nz-form] {
+    max-width: 600px;
+  }
+  nz-input-number {
+    margin-right: 8px;
+  }
+
+  div {
+    max-width: 600px;
+  }
+  i[nz-icon] {
+    font-size: 32px;
+    color: #999;
+  }
+  .ant-upload-text {
+    margin-top: 8px;
+    color: #666;
+  }
+  .clearfix{
+      text-align: center;
+  }
