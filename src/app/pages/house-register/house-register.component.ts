@@ -13,4 +13,3 @@ export class HouseRegisterComponent implements OnInit {
   }
 
 }
-

@@ -25,9 +25,6 @@ export class Superscription{
     setCity(city: string): void{
         this.city = city;
     }
-    getCity(): string{
-        return this.city;
-    }
 
     setState(state: string): void{
         this.state = state;
