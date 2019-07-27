@@ -26,7 +26,10 @@
 
 nz-header {
   position: fixed;
+  z-index: 10;
   width: 100%;
+  background-color: transparent;
+  padding: 1rem 2rem;
 }
 
 [nz-menu] {
@@ -34,6 +37,7 @@ nz-header {
 }
 
 nz-content {
+  position: relative;
   padding: 0 50px;
   margin-top: 64px;
 }
