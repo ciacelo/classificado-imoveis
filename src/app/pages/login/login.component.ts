@@ -8,14 +8,6 @@ import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 
 export class LoginComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
-export class NzDemoFormNormalLoginComponent implements OnInit {
   validateForm: FormGroup;
 
   submitForm(): void {

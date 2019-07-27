@@ -1,0 +1,57 @@
+<p>Página de Cadastro</p>
+<form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm(validateForm.value)">
+    <nz-form-item>
+      <nz-form-label [nzSpan]="7" nzRequired>Nome Completo</nz-form-label>
+      <nz-form-control [nzSpan]="12" nzHasFeedback nzValidatingTip="Validating..." [nzErrorTip]="userErrorTpl">
+        <input nz-input formControlName="userName" placeholder="async validate try to write JasonWood" />
+        <ng-template #userErrorTpl let-control>
+          <ng-container *ngIf="control.hasError('required')">
+            Por favor digite seu nome!
+          </ng-container>
+        </ng-template>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label [nzSpan]="7" nzRequired>E-mail</nz-form-label>
+      <nz-form-control [nzSpan]="12" nzHasFeedback [nzErrorTip]="emailErrorTpl">
+        <input nz-input formControlName="email" placeholder="email" type="email" />
+        <ng-template #emailErrorTpl let-control>
+          <ng-container *ngIf="control.hasError('email')">
+            O e-mail digitado não é válido!
+          </ng-container>
+          <ng-container *ngIf="control.hasError('required')">
+            Por favor insira seu e-mail!
+          </ng-container>
+        </ng-template>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label [nzSpan]="7" nzRequired>Senha</nz-form-label>
+      <div>
+        <nz-form-control [nzSpan]="12" nzHasFeedback nzErrorTip="Por favor insira sua senha!">
+          <input nz-input type="password" formControlName="password" (ngModelChange)="validateConfirmPassword()" />
+        </nz-form-control>
+      </div>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label [nzSpan]="7" nzRequired>Confirmar senha</nz-form-label>
+      <nz-form-control [nzSpan]="12" nzHasFeedback [nzErrorTip]="passwordErrorTpl">
+        <input nz-input type="password" formControlName="confirm" placeholder="confirme sua senha" />
+        <ng-template #passwordErrorTpl let-control>
+          <ng-container *ngIf="control.hasError('required')">
+            Por favor confirme sua senha!
+          </ng-container>
+          <ng-container *ngIf="control.hasError('confirm')">
+            As senhas não correspondem!
+          </ng-container>
+        </ng-template>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control [nzOffset]="7" [nzSpan]="12">
+        <button nz-button nzType="primary" [disabled]="!validateForm.valid">Submit</button>
+        <button nz-button (click)="resetForm($event)">Reset</button>
+      </nz-form-control>
+    </nz-form-item>
+  </form>
+  
