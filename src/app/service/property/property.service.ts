@@ -19,30 +19,4 @@ export class PropertyService {
     this.properties.push(property);
   }
 
-  removeProperty(id: number): void{
-    for(let i=0;i<this.properties.length;i++){
-      if(this.properties[i].getId() === id){
-        this.properties.splice(1, id);
-      }
-    }
-  }
-
-  getProperty(id: number): Property{
-    for(let i=0;i<this.properties.length;i++){
-      if(this.properties[i].getId() === id){
-       return this.properties[id];
-      }
-    }
-  }
-
-  addPhoto(propertyId: number, photo: Photo): void{
-    for(let i=0;i<this.properties.length;i++){
-      if(this.properties[i].getId() === propertyId){
-        let photos: Photo[] = this.properties[i].getPhoto();
-        photos.push(photo);
-        break;
-      }
-    }
-  }
-
 }
