@@ -4,7 +4,6 @@ import { PropertyService } from 'src/app/service/property/property.service';
 
 const routes: Routes = [
   { path: 'property/:id', loadChildren: () => import('./pages/property-details/property-details.module').then(m => m.PropertyDetailsModule) },
-  { path: 'house', loadChildren: () => import('./pages/house-register/house-register.module').then(m => m.HouseRegisterModule) }
 ];
 
 @NgModule({
