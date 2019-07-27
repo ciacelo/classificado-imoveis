@@ -1,0 +1,36 @@
+<div>
+        <div>
+
+        <p>
+            {{getProperty().getName()}}
+        </p>
+        <nz-divider nzText="Descrição"></nz-divider>
+        <p>       
+            {{getProperty().getDescription()}}
+        </p>
+        <nz-divider nzText="Preço"></nz-divider>
+        <p>
+             R$ {{getProperty().getValue()}}
+        </p>
+            <nz-divider nzText="Endereço"></nz-divider>
+        <p>
+            Cidade: {{getSuperscription().getCity()}}
+            <br />
+            Estado: {{getSuperscription().getState()}}
+            <br>
+            Latitude: {{getSuperscription().getLatitude()}}
+            <br>
+            Longitude: {{getSuperscription().getLongitude()}}
+            <br />
+            Logradouro: {{getSuperscription().getAddres()}}
+        </p>
+        <nz-divider nzText="Detalhes"></nz-divider>
+        <p>
+            Tipo de imóvel: {{getFeatures().getType()}}
+            <br />
+            Quantidade de cômodos: {{getFeatures().getRooms()}}
+            <br />
+            Tamanho: {{getFeatures().getArea()}} M² (Metros quadrados)
+        </p>
+        </div>
+</div>
