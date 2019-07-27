@@ -1,0 +1,53 @@
+<form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+    <nz-form-item>
+      <nz-form-label [nzSpan]="5" nzRequired nzFor="note">Lugar</nz-form-label>
+      <nz-form-control [nzSpan]="12" nzErrorTip="Por favor insira uma lugar!">
+        <input id="note" type="text" nz-input formControlName="note" />
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label [nzSpan]="5" nzFor="gender" nzRequired>Categoria</nz-form-label>
+      <nz-form-control [nzSpan]="12" nzErrorTip="Por favor selecione uma categoria!">
+        <nz-select
+          id="gender"
+          formControlName="gender"
+          nzPlaceHolder="Selecione uma opção e escolha a categoria inicial"
+          (ngModelChange)="genderChange($event)"
+        >
+          <nz-option nzValue="aluga" nzLabel="Alugar"></nz-option>
+          <nz-option nzValue="venda" nzLabel="Comprar"></nz-option>
+        </nz-select>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-label [nzSpan]="5" nzFor="type" nzRequired>tipo de imóvel</nz-form-label>
+        <nz-form-control [nzSpan]="12" nzErrorTip="Por favor selecione um tipo.">
+        <nz-select
+            id="type"
+            formControlName="type"
+            nzPlaceHolder="Selecione uma opção e escolha a categoria inicial"
+            (ngModelChange)="genderChange($event)"
+          >
+            <nz-option nzValue="casa" nzLabel="casa"></nz-option>
+            <nz-option nzValue="apartamento" nzLabel="apartamento"></nz-option>
+            <nz-option nzValue="comercio" nzLabel="ponto comercial"></nz-option>
+          </nz-select>
+        </nz-form-control>
+      </nz-form-item>
+    <!--<nz-form-item>
+      <nz-form-control [nzSpan]="12" [nzOffset]="5">
+        <button nz-button nzType="primary">Submit</button>
+      </nz-form-control>
+    </nz-form-item>-->
+</form>
+<div>
+  <nz-form-label [nzSpan]="5" >Preço</nz-form-label>
+    <nz-input-number
+  [ngModel]="demoValue"
+  [nzMin]="1"
+  [nzMax]=""
+  [nzStep]="1"
+  [nzFormatter]="formatterDollar"
+  [nzParser]="parserDollar"
+></nz-input-number>
+</div>

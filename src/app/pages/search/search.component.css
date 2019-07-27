@@ -1,0 +1,10 @@
+[nz-form] {
+    max-width: 600px;
+  }
+  nz-input-number {
+    margin-right: 8px;
+  }
+
+  div {
+    max-width: 600px;
+  }
