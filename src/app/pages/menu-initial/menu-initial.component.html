@@ -1,43 +1,3 @@
-<!--<ul nz-menu nzMode="horizontal">
-    <li nz-menu-item>
-      <i nz-icon nzType="mail"></i>
-      Início
-    </li>
-    <li nz-menu-item routerLink="search" >
-      <i nz-icon nzType="appstore"></i>
-      Categoria
-    </li>
-    <li nz-submenu nzTitle="Navigation Three - Submenu" nzIcon="setting">
-      <ul>
-        <li nz-menu-group nzTitle="Item 1">
-          <ul>
-            <li nz-menu-item>Option 2</li>
-          </ul>
-        </li>
-        <li nz-menu-group nzTitle="Item 2">
-          <ul>
-            <li nz-menu-item>Option 3</li>
-            <li nz-menu-item>Option 4</li>
-            <li nz-submenu nzTitle="Sub Menu">
-              <ul>
-                <li nz-menu-item nzDisabled>Option 5</li>
-                <li nz-menu-item>Option 6</li>
-              </ul>
-            </li>
-            <li nz-submenu nzDisabled nzTitle="Disabled Sub Menu">
-              <ul>
-                <li nz-menu-item>Option 5</li>
-                <li nz-menu-item>Option 6</li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li nz-menu-item>
-      <a href="https://ng.ant.design" target="_blank" rel="noopener noreferrer">Navigation Four - Link</a>
-    </li>
-  </ul>-->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,7 +6,7 @@
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul nz-menu nzMode="horizontal" class="navbar-nav mr-auto">
-    <li nz-menu-item>
+    <li nz-menu-item routerLink="property-list">
       <i nz-icon nzType="mail"></i>
       Início
     </li>
@@ -58,7 +18,7 @@
       <ul>
         <li nz-menu-group nzTitle="Item 1">
           <ul>
-            <li nz-menu-item>Option 2</li>
+            <li nz-menu-item routerLink="property-register">Registrar imóvel</li>
           </ul>
         </li>
         <li nz-menu-group nzTitle="Item 2">
