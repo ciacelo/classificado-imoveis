@@ -3,6 +3,10 @@ nz-header {
     width: 100%;
 }
 
+.navbar-nav {
+    background-color: transparent;
+}
+
 nz-submenu {
     float: left;
 }
