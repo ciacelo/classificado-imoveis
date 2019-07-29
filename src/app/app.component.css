@@ -18,12 +18,12 @@
   float: left;
 }
 
-nz-header {
-  position: fixed;
-  z-index: 10;
+
+
+.header {
+  
   width: 100%;
-  background-color: transparent;
-  padding: 1rem 2rem;
+  height: auto;
 }
 
 [nz-menu] {
@@ -32,17 +32,14 @@ nz-header {
 
 nz-content {
   position: relative;
-  padding: 0 50px;
+  /*padding: 0 50px;*/
   margin-top: 64px;
 }
 
-nz-breadcrumb {
-  margin: 16px 0;
-}
 
 .inner-content {
   background: #fff;
-  padding: 24px;
+  /*padding: 24px;*/
   min-height: 380px;
 }
 

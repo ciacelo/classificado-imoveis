@@ -2,6 +2,11 @@ nz-header {
     position: fixed;
     width: 100%;
 }
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 15;
+}
 
 .navbar-nav {
     background-color: transparent;

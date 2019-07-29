@@ -10,6 +10,13 @@ let photos: Photo[] = [
 ];
 
 export const propertyMock: Property[] = [
-    new Property(1, 'Casa', 1, 'Descrição da casa', superscription, features, photos)
+    new Property(1, 'Casa', 1, 'Descrição da casa', superscription, features, photos),
+    new Property(2, 'Casa', 1, 'Descrição da casa', superscription, features, photos),
+    new Property(3, 'Casa', 1, 'Descrição da casa', superscription, features, photos),
+    new Property(4, 'Casa', 1, 'Descrição da casa', superscription, features, photos),
+    new Property(5, 'Casa', 1, 'Descrição da casa', superscription, features, photos),
+    new Property(6, 'Casa', 1, 'Descrição da casa', superscription, features, photos),
+    new Property(7, 'Casa', 1, 'Descrição da casa', superscription, features, photos)
+
 ];
 
