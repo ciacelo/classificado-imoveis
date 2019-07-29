@@ -7,9 +7,18 @@ nz-header {
     background-repeat: no-repeat;
     background-image: url('https://cjs.zapcorp.com.br/Content/img/home/fundo-zap-busca.jpg');
     width: 100%;
-    height: 18rem;
-    background-color: transparent;
-    padding: 1rem 2rem;
+    height: 22rem;
+    padding: 0;
+}
+
+.header{
+    color: #fff;
+    padding: 5rem;
+    background-color:rgba(47, 42, 36, 0.36);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
 }
 
 .section{
@@ -35,6 +44,18 @@ nz-header {
     margin: -10px;
 }
 
+
+.advertiseHeaderSectionDescription{
+    color: #fff;
+}
+
+.advertiseHeaderSection{
+    text-align: center;
+    color: #fff;
+
+
+}
+
 .downButton{
     width: 45px; 
     height: 45px; 
@@ -52,4 +73,11 @@ nz-header {
     z-index: 10;
     content: "\e62e";
     box-shadow: 0 2px 3px rgba(0,0,0,0.25);
+}
+
+.howToUse{
+    padding: 5rem;
+    margin: 0px;
+    width: 100%;
+    height: 300px;
 }
