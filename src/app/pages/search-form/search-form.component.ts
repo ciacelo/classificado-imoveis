@@ -5,11 +5,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-search',
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css']
+  templateUrl: './search-form.component.html',
+  styleUrls: ['./search-form.component.css']
 })
 
-export class SearchComponent implements OnInit {
+export class SearchFormComponent implements OnInit {
   validateForm: FormGroup;
   demoValue = 100;
   formatterDollar = (value: number) => `R$ ${value}`;
