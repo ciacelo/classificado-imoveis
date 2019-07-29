@@ -12,6 +12,7 @@ const routes: Routes = [
   { path: 'login', loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule) },
   { path: 'search', loadChildren: () => import('./pages/search/search.module').then(m => m.SearchModule) },
   { path: 'property/:id', loadChildren: () => import('./pages/property-details/property-details.module').then(m => m.PropertyDetailsModule) },
+  { path: 'find', loadChildren: () => import('./components/find/find.module').then(m => m.FindModule) }
 ];
 
 @NgModule({
