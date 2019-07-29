@@ -4,17 +4,28 @@
             <div class="row">
                 <app-search-bar class="search-bar"></app-search-bar>
             </div>
+            <div class="row">
+               <h3 class="slogan">Busque o imóvel ideial para a sua necessidade!</h3>
+            </div>
+            <div class="row">
+                <button class="advertise">Anunciar</button>
+            </div>
         </div>
     </nz-header>
+    <nz-divider class="divider" [nzText]="dividerIcon">
+        <ng-template #dividerIcon>
+            <span class="downButton"></span>
+        </ng-template>
+    </nz-divider>
     <div class="container">
-        <div class="section" >
+        <div class="section">
             Informações
         </div>        
         <div class="section">
             <app-find></app-find>
         </div>    
 
-        <!--Properties type-->>
+        <!--Properties type-->
         <div class="section">
             <div class="row type">
                 <h3>Casas</h3>
@@ -34,7 +45,7 @@
         </div>
         <div class="section">
             <div class="row type">
-                <h3>Ponto Comercial</h3>
+                <h3>Pontos Comerciais</h3>
             </div>
             <div class="row type">
                 <app-property-list [limit]=3 [properties]="getProperties()"></app-property-list>
