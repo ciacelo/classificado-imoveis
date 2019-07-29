@@ -1,3 +1,4 @@
+
 export class User{
     id: number;
     name: string;
@@ -16,7 +17,7 @@ export class User{
     this.name = name,
     this.email = email,
     this.telefone = telefone,
-    this.photos = photos
+    this.photos = photos;
     }
 
     setName(name:string):void{
@@ -32,10 +33,10 @@ export class User{
     getEmail(){
         return this.email;
     }
-    setPhoto(photo: string):void{
+    setPhoto(photo: string): void{
         this.photos = photo;
     }
-    getPhoto(): string{
+    getPhoto(){
         return this.photos;
     }
     setTelefone(telefone: number):void{
