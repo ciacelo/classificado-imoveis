@@ -11,15 +11,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { registerLocaleData, CommonModule } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { MenuInitialComponent } from './pages/menu-initial/menu-initial.component';
+import { MenuProfileComponent } from './pages/menu-profile/menu-profile.component';
+
 
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuInitialComponent
+    MenuInitialComponent,
+    MenuProfileComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     IconsProviderModule,
