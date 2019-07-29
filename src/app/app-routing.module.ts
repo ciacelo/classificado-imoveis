@@ -14,6 +14,7 @@ const routes: Routes = [
   { path: 'property/:id', loadChildren: () => import('./pages/property-details/property-details.module').then(m => m.PropertyDetailsModule) },
   { path: 'user-profile', loadChildren: () => import('./pages/user-profile/user-profile.module').then(m => m.UserRegisterModule) },
   { path: 'user-favorite', loadChildren: () => import('./pages/user-favorite/user-favorite.module').then(m => m.UserFavoriteModule) },
+  { path: 'find', loadChildren: () => import('./components/find/find.module').then(m => m.FindModule) }
 ];
 
 @NgModule({
