@@ -10,8 +10,23 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PropertyListComponent implements OnInit {
   
   @Input() properties: Object[];
+  @Input() limit: number;
+ 
+  ngOnInit(){
+    let firstProperties = [];
+    let propsAux = this.properties;
 
-  ngOnInit(){}
+    if(typeof this.limit !== 'undefined'){
+      for(let i=0;i<propsAux.length;i++){
+        firstProperties.push(propsAux[i]);
+        if(i === this.limit){
+          break;
+        }
+      }
+      this.properties = firstProperties;
+    }
+
+  }
 
   getProperties(): Object[]{
       return this.properties;

@@ -3,13 +3,21 @@
 }
 
 nz-header {
-    background-image: url("https://images2.alphacoders.com/100/thumb-1920-1003880.png");
+    background-image: url("https://www.olx.com.br/vender/static/bg-autos-1920x320.c9f153df.jpg");
     width: 100%;
     height: 18rem;
     background-color: transparent;
     padding: 1rem 2rem;
 }
 
+.section{
+    width: 100%;
+}
+
 .search-bar {
     width: 80%;
+}
+
+.type{
+    justify-content: left;
 }
