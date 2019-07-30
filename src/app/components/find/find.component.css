@@ -26,6 +26,16 @@
     flex-direction: column;
     text-decoration: none;
     padding: 12px;
+    max-width: 100%;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+  }
+
+  .propertyType .image:hover {
+    -moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
   }
 
  .propertyType .image-a{
@@ -58,6 +68,7 @@
     width: 25%;
     overflow: hidden;
     position: relative;
+ 
 }
 @media (min-width: 992px){
   .propertyType .image {
@@ -84,7 +95,7 @@
 
 .propertyType .content{
   background-color: rgb(0,0,0,0.53);
-  padding: 1rem;
+  padding: 4rem;
   padding-top: 5rem;
   width: 100%;
   height: 100%;
@@ -109,9 +120,6 @@
     border: .5px solid #f6f6f6;
   }
 }
-
-
-
 
 
 
