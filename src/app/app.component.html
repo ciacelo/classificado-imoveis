@@ -1,8 +1,8 @@
 <nz-layout class="layout">
-    <div *ngIf="showProfile">
+    <div *ngIf="!showProfile">
       <app-menu-initial ></app-menu-initial>
     </div>
-    <div *ngIf="!showProfile">
+    <div *ngIf="showProfile">
       <app-menu-profile ></app-menu-profile>
     </div>
   <nz-content>    
