@@ -10,6 +10,7 @@ nz-header {
 
 .navbar-nav {
     background-color: transparent;
+    text-shadow: -1px 1px 2px #0000007d;
     color: white;
 }
 
@@ -30,8 +31,14 @@ nav.black {
 
 .navbar-light .navbar-brand {
     color: rgba(255, 255, 255, 0.9);
+    text-shadow: -1px 1px 2px #0000007d;
 }
 
 .ant-menu-horizontal {
     border-bottom: 0;
 }    
+
+.anticon {
+    vertical-align: 1.5px;
+    box-shadow: 0px 0px 2px 0px #00000047;
+}
