@@ -8,7 +8,7 @@ nz-header {
     background-repeat: no-repeat;
     background-image: url('https://cjs.zapcorp.com.br/Content/img/home/fundo-zap-busca.jpg');
     width: 100%;
-    height: 28rem;
+    height: 30rem;
     padding: 0;
 }
 
@@ -84,8 +84,10 @@ nz-header {
     font-size: 10pt;
     background: #007bff;
     width: 101%;
-    padding: 5rem;
-    min-height: 250px;
+    padding: 4rem;
+    min-height: 205px;
+    margin-bottom: 4rem;
+    box-shadow: -1px 1px 5px 0px #000000f0;
 }
 
 .iconHowto{
