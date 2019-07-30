@@ -6,45 +6,32 @@
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul nz-menu nzMode="horizontal" class="navbar-nav mr-auto">
-    <li nz-menu-item routerLink="home" routerLinkActive="home">
-      <i nz-icon nzType="mail"></i>
-      Início
-    </li>
-    <li nz-menu-item routerLink="search-form" >
-      <i nz-icon nzType="appstore"></i>
-      Categoria
-    </li>
-    <li nz-submenu nzTitle="Navigation Three - Submenu" nzIcon="setting">
-      <ul>
-        <li nz-menu-group nzTitle="Item 1">
-          <ul>
-            <li nz-menu-item routerLink="/find" routerLinkActive="active" >Descubra</li>
-            <li nz-menu-item routerLink="property-register">Registrar imóvel</li>
-          </ul>
+        <li nz-menu-item routerLink="home" routerLinkActive="home">
+          <i nz-icon nzType="mail"></i>
+          Início
         </li>
-        <li nz-menu-group nzTitle="Item 2">
-          <ul>
-            <li nz-menu-item routerLink="user-register">Registrar usuário</li>
-            <li nz-menu-item routerLink="">Entrar</li>
-            <li nz-submenu nzTitle="Sub Menu">
-              <ul>
-                <li nz-menu-item nzDisabled>Option 5</li>
-                <li nz-menu-item>Option 6</li>
-              </ul>
-            </li>
-            <li nz-submenu nzDisabled nzTitle="Disabled Sub Menu">
-              <ul>
-                <li nz-menu-item>Option 5</li>
-                <li nz-menu-item>Option 6</li>
-              </ul>
-            </li>
-          </ul>
+        <li nz-menu-item routerLink="search-form" >
+          <i nz-icon nzType="appstore"></i>
+          Categoria
+        </li>
+        <li nz-menu-item routerLink="property-register">
+          <i nz-icon nzType="appstore"></i>
+          Registrar imóvel
+        </li>
+        <li nz-menu-item routerLink="find">
+          <i nz-icon nzType="appstore"></i>
+          Descubra
         </li>
       </ul>
-    </li>
-    <li nz-menu-item>
-      <a href="https://ng.ant.design" target="_blank" rel="noopener noreferrer">Navigation Four - Link</a>
-    </li>
-  </ul>
+      <ul nz-menu nzMode="horizontal" class="navbar-nav mr-auto">
+        <li nz-menu-item routerLink="user-register">
+          <i nz-icon nzType="mail"></i>
+          Registrar usuário
+        </li>
+        <li nz-menu-item routerLink="login">
+          <i nz-icon nzType="mail"></i>
+          Entrar
+        </li>
+      </ul>
     </div>
   </nav>
