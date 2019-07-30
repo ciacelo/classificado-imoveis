@@ -1,3 +1,4 @@
+
 .row {
     justify-content: center;
 }
@@ -39,8 +40,12 @@ nz-header {
 }
 
 .advertise{
+    width: 150px;
+    font-size: 18pt;
     align-items: center;
+    border: transparent;
 }
+
 .divider{
     margin: -10px;
 }
@@ -91,3 +96,8 @@ nz-header {
     color: #fff;
 }
 
+.info{
+    width: 100%;
+    height: 230px;
+    background: #007bff;
+}
