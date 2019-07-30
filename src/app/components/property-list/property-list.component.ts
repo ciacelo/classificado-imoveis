@@ -10,6 +10,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PropertyListComponent implements OnInit {
   
   @Input() properties: Object[];
+  @Input() actions: Object[];
   @Input() limit: number;
  
   ngOnInit(){
@@ -26,11 +27,22 @@ export class PropertyListComponent implements OnInit {
       }
       this.properties = firstProperties;
     }
-
   }
 
   getProperties(): Object[]{
       return this.properties;
   }
 
+
+  getActions(): Object[]{
+    if(typeof this.actions !== 'undefined'){
+      let actions = this.actions.map(item =>{
+        return item;
+      });
+
+      return actions;
+    }
+    
+    return null;
+  }
 }
