@@ -69,7 +69,7 @@ nz-header {
     position: absolute;
     bottom: -22px;
     left: 50%;
-    margin-left: -22.5px;
+    margin-left: -10px;
     cursor: pointer;
     z-index: 10;
     content: "\e62e";
@@ -77,7 +77,16 @@ nz-header {
 }
 
 .howToUse{
+    font-size: 10pt;
+    background: #007bff;
+    width: 101%;
     padding: 5rem;
-    min-height: 200px;
+    min-height: 300px;
+}
+
+.iconHowto{
+    padding: 10px;
+    color: #fff;
+    font-size: 60pt;
 }
 
