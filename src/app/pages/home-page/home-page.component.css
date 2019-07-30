@@ -101,3 +101,7 @@ nz-header {
     height: 230px;
     background: #007bff;
 }
+
+.fa-chevron-down {
+    color: darkslategrey;
+}
