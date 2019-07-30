@@ -7,13 +7,23 @@ nz-header {
     background-repeat: no-repeat;
     background-image: url('https://cjs.zapcorp.com.br/Content/img/home/fundo-zap-busca.jpg');
     width: 100%;
-    height: 18rem;
-    background-color: transparent;
-    padding: 1rem 2rem;
+    height: 22rem;
+    padding: 0;
+}
+
+.header{
+    color: #fff;
+    padding: 5rem;
+    background-color:rgba(47, 42, 36, 0.36);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
 }
 
 .section{
     width: 100%;
+    padding: 1rem;  
 }
 
 .search-bar {
@@ -35,6 +45,16 @@ nz-header {
     margin: -10px;
 }
 
+
+.advertiseHeaderSectionDescription{
+    color: #fff;
+}
+
+.advertiseHeaderSection{
+    text-align: center;
+    color: #fff;
+}
+
 .downButton{
     width: 45px; 
     height: 45px; 
@@ -47,9 +67,27 @@ nz-header {
     position: absolute;
     bottom: -22px;
     left: 50%;
-    margin-left: -22.5px;
+    margin-left: -10px;
     cursor: pointer;
     z-index: 10;
     content: "\e62e";
     box-shadow: 0 2px 3px rgba(0,0,0,0.25);
 }
+
+.howToUse{
+    text-align: center;
+    font-size: 10pt;
+    background: #007bff;
+    width: 101%;
+    padding: 5rem;
+    min-height: 250px;
+}
+
+.iconHowto{
+    color: #fff;
+    font-size: 60pt;
+}
+.stepTitle{
+    color: #fff;
+}
+

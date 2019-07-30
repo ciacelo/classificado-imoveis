@@ -1,8 +1,15 @@
-.card {
-    margin: 1.5rem;
+.ant-card-body {
+    padding: 0 !important;
+    padding-top: 20px;
+    zoom: 1;
 }
 
-.ant-card-hoverable:hover {
-    border-color: rgba(116, 118, 176, 0.48);
-    box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.17);
+.card {
+    border:transparent;
+    margin: 1.5rem;
+    cursor: pointer;
+    text-align: left;
+    font-size: 12pt;
+    color: black;
+
 }

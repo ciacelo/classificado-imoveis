@@ -1,15 +1,16 @@
 <div class="row">
-    <div class="card borda-card" *ngFor="let property of getProperties()">
+    <div *ngFor="let property of getProperties()">
         <div class="row">
-            <div class="col-xs-10">
-                <nz-card style="width: 260px;" nzHoverable [nzCover]="coverTemplate">
+            <div class="col-xs-10" >
+                <nz-card class="card" style="width: 260px;" [nzCover]="coverTemplate">
                     <nz-card-meta
+                        class="meta"
                         nzTitle="{{property.name}}"
                         nzDescription="{{property.description}}">
                     </nz-card-meta>
                 </nz-card>
                 <ng-template style="height:20px"  #coverTemplate>
-                    <img alt="example" src="{{property.photos[0].path}}"/>
+                    <img alt="{{property.name}}" src="{{property.photos[0].path}}"/>
                 </ng-template>
                 <div>
                     {{getActions()}}

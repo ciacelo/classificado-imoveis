@@ -8,7 +8,10 @@
                <h3 class="slogan">Busque o imóvel ideial para a sua necessidade!</h3>
             </div>
             <div class="row">
-                <button class="advertise">Anunciar</button>
+                <div class="advertiseHeaderSection">
+                    <h5 class="advertiseHeaderSectionDescription">Divulgue seu imóvel parado conosco</h5>
+                    <button class="btn btn-primary advertise">Anunciar</button>
+                </div>
             </div>
         </div>
     </nz-header>
@@ -17,10 +20,21 @@
             <span class="downButton"></span>
         </ng-template>
     </nz-divider>
-    <div class="container">
-        <div class="section">
-            Informações
-        </div>        
+    <div class="row howToUse">
+        <div class="col step"> 
+            <i class="fa fa-search iconHowto"></i>
+            <h3 class="stepTitle">Pesquise</h3>
+        </div>
+        <div class="col step"> 
+            <i class="fa fa-map-marked iconHowto"></i>
+            <h3 class="stepTitle">Encontre</h3>
+        </div>
+        <div class="col step"> 
+            <i class="fas fa-handshake iconHowto"></i>
+            <h3 class="stepTitle">Contrate!</h3>
+        </div>
+    </div> 
+    <div class="container">       
         <div class="section">
             <app-find></app-find>
         </div>    
@@ -31,7 +45,7 @@
                 <h3>Casas</h3>
             </div>
             <div class="row type">
-                <app-property-list [limit]=3 [properties]="getProperties()"></app-property-list>
+                <app-property-list limit=4 [properties]="getProperties()"></app-property-list>
             </div>
         </div>
 
@@ -40,7 +54,7 @@
                 <h3>Apartamentos</h3>
             </div>
             <div class="row type">
-                <app-property-list [limit]=3 [properties]="getProperties()"></app-property-list>
+                <app-property-list limit=4 [properties]="getProperties()"></app-property-list>
             </div>
         </div>
         <div class="section">
@@ -48,7 +62,7 @@
                 <h3>Pontos Comerciais</h3>
             </div>
             <div class="row type">
-                <app-property-list [limit]=3 [properties]="getProperties()"></app-property-list>
+                <app-property-list limit=4 [properties]="getProperties()"></app-property-list>
             </div>
         </div>
         <div class="section">

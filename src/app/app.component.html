@@ -1,5 +1,10 @@
 <nz-layout class="layout">
-    <app-menu-initial></app-menu-initial>
+    <div *ngIf="showProfile">
+      <app-menu-initial ></app-menu-initial>
+    </div>
+    <div *ngIf="!showProfile">
+      <app-menu-profile ></app-menu-profile>
+    </div>
   <nz-content>    
     <div class="inner-content">
         <router-outlet></router-outlet>

@@ -18,6 +18,7 @@ export class PropertyListComponent implements OnInit {
     let propsAux = this.properties;
 
     if(typeof this.limit !== 'undefined'){
+      this.limit--;
       for(let i=0;i<propsAux.length;i++){
         firstProperties.push(propsAux[i]);
         if(i === this.limit){
