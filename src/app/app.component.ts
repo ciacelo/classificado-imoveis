@@ -14,7 +14,10 @@ export class AppComponent {
   constructor(private router: Router){
     router.events.subscribe((val)=>{
       if(val instanceof NavigationStart){
-        if(val.url.toLocaleLowerCase() === '/home'){
+        console.log(val.url)
+        if(val.url.toLocaleLowerCase() === '/home' || 
+            val.url.toLocaleLowerCase() === '/' || 
+            val.url.toLocaleLowerCase() === '/#'){
           this.isHome = true;
         }else{
           this.isHome = false;

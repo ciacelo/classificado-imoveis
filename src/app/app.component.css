@@ -43,5 +43,7 @@ nz-content {
 }
 
 nz-footer {
+  height: 270px;
+  background: #007bff;
   text-align: center;
 }

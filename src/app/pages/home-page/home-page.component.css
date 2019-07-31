@@ -100,10 +100,41 @@ nz-header {
 
 .info{
     width: 100%;
-    height: 230px;
-    background: #007bff6e;
+    height: auto;
+    padding: 2rem;
+    background: #007bff00;
 }
 
 .fa-chevron-down {
     color: darkslategrey;
 }
+
+#spinners {
+    margin: 3% 1% 3% 1%;
+}
+
+#spinners .spinner-border {
+    display: inline-block;
+    margin: 1% 3% 1% 3%;
+    width: 8rem !important ;
+    height: 8rem !important;
+    text-align: center;
+    vertical-align: text-bottom;
+    border: .25em solid currentColor;
+    border-right-color: #00000021;
+    border-radius: 50%;
+    -webkit-animation: spinner-border linear infinite;
+    animation: spinner-border linear infinite;
+}
+
+#spinners p#spinner-info-center {
+    margin-top: 30%; 
+    font-size: 26px; 
+    margin-bottom: 0; 
+    margin-bottom: -7px;
+}
+
+#spinners p#spinner-info-center-under {
+    font-size: 10px;
+}
+

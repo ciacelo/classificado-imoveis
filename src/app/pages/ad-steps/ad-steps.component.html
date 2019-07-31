@@ -1,0 +1,142 @@
+<div class = "steps">
+    <nz-steps [nzCurrent]="current">
+        <nz-step nzTitle="Comece pelo básico"></nz-step>
+        <nz-step nzTitle="Quase lá"></nz-step>
+        <nz-step nzTitle="Capriche nos detalhes"></nz-step>
+      </nz-steps>
+    <!-- Primerio passo -->
+    <div class="steps-content" style="width: 100%; text-align: center;">
+    <div *ngIf = "current === 0">
+        <p> Que tipo de imóvel você está anunciando? </p>
+        <nz-select
+        style="width: 200px;"
+        nzShowSearch
+        nzAllowClear
+        nzPlaceHolder="Selecione uma opção"
+        [(ngModel)]="selectedValue"
+        >
+        <nz-option nzLabel="Casa" nzValue="house"></nz-option>
+        <nz-option nzLabel="Apartamento" nzValue="apartment"></nz-option>
+        <nz-option nzLabel="Ponto Comercial" nzValue="market point"></nz-option>
+        </nz-select>
+    </div>
+    <!-- Segundo passo -->
+    <div *ngIf = "current === 1">
+        <p> Onde fica o seu imóvel? </p>
+        <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+            <nz-form-item>
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="email" nzRequired>País</nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Por favor insira o país">
+                <input nz-input id="email" formControlName="email"/>
+            </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="endereco">Endereço</nz-form-label>
+                <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Por favor insira um endereço!">
+                    <input nz-input type="password" formControlName="password" id="password" (ngModelChange)="updateConfirmValidator()"/>
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="password" nzRequired>Cidade</nz-form-label>
+                <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Por favor insira a cidade">
+                    <input nz-input type ="password"formControlName="password" id="password"/>
+            </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                    <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="password" nzRequired>Estado</nz-form-label>
+                    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Por favor insira um estado!">
+                    <input nz-input type= "password" id="password" formControlName="password"/>
+                    </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="password" nzRequired>CEP</nz-form-label>
+                <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Por favor insira um CEP!">
+                    <input nz-input type="password"id="password"formControlName="cep"/>
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="phoneNumber" nzRequired>Telefone</nz-form-label>
+                <nz-form-control [nzSm]="14"[nzXs]="24" [nzValidateStatus]="validateForm.controls['phoneNumber']" nzErrorTip="Por favor insira seu telefone!">
+                <nz-input-group [nzAddOnBefore]="addOnBeforeTemplate">
+                    <ng-template #addOnBeforeTemplate>
+                    <nz-select formControlName="phoneNumberPrefix" class="phone-select">
+                        <nz-option nzLabel="+55" nzValue="+55"></nz-option>
+                    </nz-select>
+                    </ng-template>
+                    <input formControlName="phoneNumber" id="'phoneNumber'" nz-input />
+                </nz-input-group>
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item nz-row class="register-area">
+                <nz-form-control [nzSpan]="14" [nzOffset]="6">
+                <button nz-button nzType="primary">Cadastrar</button>
+                </nz-form-control>
+            </nz-form-item>
+            </form>        
+        </div>
+       <!-- Terceiro Passo-->
+        <div *ngIf="current === 2">
+                <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm(validateForm.value)">
+                        <nz-form-item>
+                          <nz-form-label [nzSpan]="7" nzRequired>Nome do Anúncio</nz-form-label>
+                          <nz-form-control [nzSpan]="12" nzHasFeedback nzValidatingTip="Validating..." [nzErrorTip]="userErrorTpl">
+                            <input nz-input formControlName="userName" placeholder="Insira um nome para o seu anúncio" />
+                            <ng-template #userErrorTpl let-control>
+                              <ng-container *ngIf="control.hasError('required')">
+                                Por favor insira um nome!
+                              </ng-container>
+                            </ng-template>
+                          </nz-form-control>
+                        </nz-form-item>
+                        <nz-form-item>
+                          <nz-form-label [nzSpan]="7" nzRequired>Área do imóvel</nz-form-label>
+                          <nz-form-control [nzSpan]="12" nzHasFeedback [nzErrorTip]="emailErrorTpl">
+                            <input nz-input formControlName="email" placeholder="Insira a área (m²)" type="email" />
+                            <ng-template #emailErrorTpl let-control>
+                              <ng-container *ngIf="control.hasError('required')">
+                                Por favor insira a área do imóvel!
+                              </ng-container>
+                            </ng-template>
+                          </nz-form-control>
+                        </nz-form-item>
+                        <nz-form-item>
+                                <nz-form-label [nzSpan]="7" nzRequired>Quantidade de quartos</nz-form-label>
+                                <nz-form-control [nzSpan]="12" nzHasFeedback [nzErrorTip]="emailErrorTpl">
+                                  <input nz-input formControlName="email" placeholder="Insira a quantidade de quartos" type="email" />
+                                  <ng-template #emailErrorTpl let-control>
+                                    <ng-container *ngIf="control.hasError('required')">
+                                      Por favor insira a quantidade de quartos!
+                                    </ng-container>
+                                  </ng-template>
+                                </nz-form-control>
+                              </nz-form-item>  
+                      </form>
+                      <p> Insira as fotos do seu imóvel </p>
+                          <div class="clearfix">
+                            <nz-upload
+                              class="upload-list-inline"
+                              nzAction="https://jsonplaceholder.typicode.com/posts/"
+                              nzListType="picture"
+                              [(nzFileList)]="fileList2"
+                            >
+                              <button nz-button>
+                                <span><i nz-icon nzType="upload"></i> Upload</span>
+                              </button>
+                            </nz-upload>
+                          </div>       
+      </div>
+      <!-- Botão -->
+      <div class="steps-action">
+        <button nz-button nzType="default" (click)="pre()" *ngIf="current > 0">
+          <span>Anterior</span>
+        </button>
+        <button nz-button nzType="default" (click)="next()" *ngIf="current < 2">
+          <span>Próximo</span>
+        </button>
+        <button nz-button nzType="primary" (click)="done()" *ngIf="current === 2">
+          <span>Feito</span>
+        </button>
+      </div>
+
+
+</div>
