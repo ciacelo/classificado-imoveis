@@ -21,22 +21,22 @@
         </ng-template>
     </nz-divider>
     <div class="row howToUse">
-        <hr size="1" style="border:1px dashed rgb(252, 252, 252); z-index:20; flex: auto;">
+        <hr size="1" style="border:1px dashed rgb(252, 252, 252); z-index:2; flex: auto;">
         <div class="col step"> 
             <i class="fa fa-search iconHowto"></i>
             <h3 class="stepTitle">Pesquise</h3>
         </div>
-        <hr size="1" style="border:1px dashed rgb(252, 252, 252); z-index:20; flex: auto;">
+        <hr size="1" style="border:1px dashed rgb(252, 252, 252); z-index:2; flex: auto;">
         <div class="col step"> 
             <i class="fa fa-map-marked iconHowto"></i>
             <h3 class="stepTitle">Encontre</h3>
         </div>
-        <hr size="1" style="border:1px dashed rgb(252, 252, 252); z-index:20; flex: auto;">
+        <hr size="1" style="border:1px dashed rgb(252, 252, 252); z-index:2; flex: auto;">
         <div class="col step"> 
             <i class="fas fa-handshake iconHowto"></i>
             <h3 class="stepTitle">Contrate!</h3>
         </div>
-        <hr size="1" style="border:1px dashed rgb(252, 252, 252); z-index:20; flex: auto;">
+        <hr size="1" style="border:1px dashed rgb(252, 252, 252); z-index:2; flex: auto;">
     </div> 
     <div class="container">       
         <div class="section">
@@ -74,8 +74,30 @@
             </div>
         </div>   
     </div>
+    <div class="container">
+        <hr>
+    </div>
     <div class="info">
-            <ng-template #indicatorTemplate><i nz-icon nzType="loading" style="font-size: 24px;"></i> </ng-template>
-            <nz-spin nzSimple [nzIndicator]="indicatorTemplate"> </nz-spin>
+            <div class="row spinner-text">
+                <h3>Conte conosco para anunciar</h3>
+            </div>
+            <div class="row" id="spinners" style="justify-content: center">
+                    <div class="spinner-border" role="status">
+                        <span class="sr-only">Loading...</span>
+                        <p id="spinner-info-center">230</p><p id="spinner-info-center-under">Pontos comerciais</p>
+                    </div>
+                    <div class="spinner-border" role="status">
+                        <span class="sr-only">Loadin...</span>
+                        <p id="spinner-info-center">120</p><p id="spinner-info-center-under">Casas a venda</p>
+                    </div>
+                    <div class="spinner-border" role="status">
+                        <span class="sr-only">Loading...</span>
+                        <p id="spinner-info-center">390</p><p id="spinner-info-center-under">Apartamentos a venda</p>
+                    </div>
+                    <div class="spinner-border" role="status">
+                        <span class="sr-only">Loading...</span>
+                        <p id="spinner-info-center">+200</p><p id="spinner-info-center-under">Casas e apartamentos em alugue-se</p>
+                    </div>
+            </div>
     </div>     
 </div>
