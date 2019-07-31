@@ -15,7 +15,8 @@ const routes: Routes = [
   { path: 'find', loadChildren: () => import('./components/find/find.module').then(m => m.FindModule) },
   { path: 'home/my-ads', loadChildren: () => import('./components/my-ads/my-ads.module').then(m => m.MyAdsModule) },
   { path: 'user-profile', loadChildren: () => import('./pages/user-profile/user-profile.module').then(m => m.UserRegisterModule) },
-  { path: 'user-favorite', loadChildren: () => import('./pages/user-favorite/user-favorite.module').then(m => m.UserFavoriteModule) }
+  { path: 'user-favorite', loadChildren: () => import('./pages/user-favorite/user-favorite.module').then(m => m.UserFavoriteModule) },
+  { path: 'result-page', loadChildren: () => import('./pages/result-page/result-page.module').then(m => m.ResultPageModule) }
 
 ];
 

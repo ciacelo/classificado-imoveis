@@ -1,0 +1,68 @@
+    <nz-layout>
+        <nz-sider nzWidth="200px" nzTheme="light">
+          <ul nz-menu nzMode="inline" class="sider-menu">
+            <li nz-submenu nzOpen nzTitle="Tipo de Imóvel">
+              <ul>
+                <li nz-menu-item nzSelected>Casa</li>
+                <li nz-menu-item>Apartamento</li>
+                <li nz-menu-item>Ponto Comercial</li>
+              </ul>
+            </li>
+            <li nz-submenu nzTitle="Preço">
+              <ul id="price" class="ml-auto">
+                <li>
+                    <input type="checkbox" id="preco" name="10">
+                    <label for="preco"> Até R$10.000,00</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="preco" name="30">
+                    <label for="preco"> Até R$30.000,00 </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="preco" name="70">
+                    <label for="preco"> Até R$70.000,00 </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="preco" name="150">
+                    <label for="preco"> Até R$150.000,00 </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="preco" name="250">
+                    <label for="preco"> Até R$250.000,00 </label>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nz-sider>
+        <nz-layout class="inner-layout">
+          <nz-breadcrumb>
+            <nz-breadcrumb-item style="font-size:20px; color:black;">Resultados</nz-breadcrumb-item>
+          </nz-breadcrumb>
+          <nz-content>
+          <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+              <nz-form-item>
+                  <nz-form-label [nzSpan]="5" nzFor="gender" nzRequired>Ordenar por</nz-form-label>
+                  <nz-form-control [nzSpan]="12" nzErrorTip="Por favor selecione uma categoria!">
+                    <nz-select
+                      id="gender"
+                      formControlName="gender"
+                      nzPlaceHolder="Selecione uma opção e escolha a categoria inicial"
+                      (ngModelChange)="genderChange($event)"
+                    >
+                      <nz-option nzValue="pricec" nzLabel="Preço Crescente"></nz-option>
+                      <nz-option nzValue="priced" nzLabel="Preço Decrescente"></nz-option>
+                    </nz-select>
+                  </nz-form-control>
+                </nz-form-item> 
+          </form>          
+          <div class = "row">
+              <div class="row type">
+                  <app-property-list limit=4 [properties]="getProperties()"></app-property-list>
+               
+            </div>
+          </div>
+          </nz-content>         
+        </nz-layout>
+      </nz-layout>
+
+

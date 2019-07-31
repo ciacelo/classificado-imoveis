@@ -1,0 +1,39 @@
+.steps-content {
+    margin-top: 16px;
+    border: 1px dashed #e9e9e9;
+    border-radius: 6px;
+    background-color: #fafafa;
+    min-height: 200px;
+    text-align: center;
+    padding-top: 80px;
+  }
+
+  .steps-action {
+    margin-top: 24px;
+  }
+
+  button {
+    margin-right: 8px;
+  }
+
+  .steps{
+      margin-top: 70px;
+  }
+  [nz-form] {
+    max-width: 90%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .phone-select {
+    width: 70px;
+  }
+
+  .register-are {
+    margin-bottom: 8px;
+  }
+  :host ::ng-deep .upload-list-inline .ant-upload-list-item {
+        float: left;
+        width: 200px;
+        margin-right: 8px;
+      }
