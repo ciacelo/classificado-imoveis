@@ -1,5 +1,9 @@
 [nz-form] {
     max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+    padding-top: 5rem;
   }
 
   button {
