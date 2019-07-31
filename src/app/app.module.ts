@@ -12,6 +12,7 @@ import { registerLocaleData, CommonModule } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { MenuInitialComponent } from './pages/menu-initial/menu-initial.component';
 import { MenuProfileComponent } from './pages/menu-profile/menu-profile.component';
+import { MainMenuComponent } from './pages/main-menu/main-menu.component';
 
 
 registerLocaleData(en);
@@ -20,7 +21,8 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     MenuInitialComponent,
-    MenuProfileComponent
+    MenuProfileComponent,
+    MainMenuComponent
   ],
   imports: [
     CommonModule,

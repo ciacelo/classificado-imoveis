@@ -10,7 +10,7 @@
             <div class="row">
                 <div class="advertiseHeaderSection">
                     <h5 class="advertiseHeaderSectionDescription">Divulgue seu imóvel parado conosco</h5>
-                    <button class="btn btn-primary advertise">Anunciar</button>
+                    <a routerLink="my-ads"><button class="btn btn-primary advertise">Anunciar</button></a>
                 </div>
             </div>
         </div>
@@ -21,18 +21,22 @@
         </ng-template>
     </nz-divider>
     <div class="row howToUse">
+        <hr size="1" style="border:1px dashed rgb(252, 252, 252); z-index:20; flex: auto;">
         <div class="col step"> 
             <i class="fa fa-search iconHowto"></i>
             <h3 class="stepTitle">Pesquise</h3>
         </div>
+        <hr size="1" style="border:1px dashed rgb(252, 252, 252); z-index:20; flex: auto;">
         <div class="col step"> 
             <i class="fa fa-map-marked iconHowto"></i>
             <h3 class="stepTitle">Encontre</h3>
         </div>
+        <hr size="1" style="border:1px dashed rgb(252, 252, 252); z-index:20; flex: auto;">
         <div class="col step"> 
             <i class="fas fa-handshake iconHowto"></i>
             <h3 class="stepTitle">Contrate!</h3>
         </div>
+        <hr size="1" style="border:1px dashed rgb(252, 252, 252); z-index:20; flex: auto;">
     </div> 
     <div class="container">       
         <div class="section">
@@ -71,5 +75,7 @@
         </div>   
     </div>
     <div class="info">
+            <ng-template #indicatorTemplate><i nz-icon nzType="loading" style="font-size: 24px;"></i> </ng-template>
+            <nz-spin nzSimple [nzIndicator]="indicatorTemplate"> </nz-spin>
     </div>     
 </div>

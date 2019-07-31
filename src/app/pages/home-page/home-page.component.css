@@ -92,7 +92,7 @@ nz-header {
 
 .iconHowto{
     color: #fff;
-    font-size: 60pt;
+    font-size: 40pt;
 }
 .stepTitle{
     color: #fff;
@@ -101,7 +101,7 @@ nz-header {
 .info{
     width: 100%;
     height: 230px;
-    background: #007bff;
+    background: #007bff6e;
 }
 
 .fa-chevron-down {
