@@ -1,0 +1,14 @@
+.carousel-item{
+    width: 40%;
+    height: 100px;
+    margin-right: 30%;
+    margin-left: 30%;
+    text-align: center;
+    justify-content: center;
+}
+
+ .carousel-inner{
+    text-align: center;
+    justify-content: center;
+    background: #000000;
+}

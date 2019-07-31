@@ -4,6 +4,7 @@ import { NgZorroAntdModule } from 'ng-zorro-antd';
 
 import { PropertyDetailsRoutingModule } from './property-details-routing.module';
 import { PropertyDetailsComponent } from './property-details.component';
+import { CarouselModule } from '../../components/carousel/carousel.module'
 
 
 @NgModule({
@@ -11,6 +12,7 @@ import { PropertyDetailsComponent } from './property-details.component';
       PropertyDetailsRoutingModule,
       NgZorroAntdModule,
       CommonModule,
+      CarouselModule
     ],
     declarations: [PropertyDetailsComponent],
     exports: [PropertyDetailsComponent]

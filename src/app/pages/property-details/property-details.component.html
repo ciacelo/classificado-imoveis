@@ -1,43 +1,60 @@
-<div>
-        <div>
-        <nz-carousel [nzEffect]="'fade'">
-            <div nz-carousel-content>
-                <h3>AAAAAA</h3>
+<div class="header">
+    <app-carousel [photos]="getPhotos()"></app-carousel>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+                <br />
+                <br />
+            <h1>
+                {{getProperty().getName()}}
+            </h1>
+            <nz-divider ></nz-divider>
+            <div class="row">
+                <div class="col">
+                    <h4>Descrição</h4>
+                    <br />
+                    {{getProperty().getDescription()}}
+                </div>
             </div>
-            <div nz-carousel-content>
-                <h3>AAAa</h3>
-            </div>            
-        </nz-carousel>
-        <p>
-            {{getProperty().getName()}}
-        </p>
-        <nz-divider nzText="Descrição"></nz-divider>
-        <p>       
-            {{getProperty().getDescription()}}
-        </p>
-        <nz-divider nzText="Preço"></nz-divider>
-        <p>
-             R$ {{getProperty().getValue()}}
-        </p>
-            <nz-divider nzText="Endereço"></nz-divider>
-        <p>
-            Cidade: {{getSuperscription().getCity()}}
-            <br />
-            Estado: {{getSuperscription().getState()}}
-            <br>
-            Latitude: {{getSuperscription().getLatitude()}}
-            <br>
-            Longitude: {{getSuperscription().getLongitude()}}
-            <br />
-            Logradouro: {{getSuperscription().getAddres()}}
-        </p>
-        <nz-divider nzText="Detalhes"></nz-divider>
-        <p>
-            Tipo de imóvel: {{getFeatures().getType()}}
-            <br />
-            Quantidade de cômodos: {{getFeatures().getRooms()}}
-            <br />
-            Tamanho: {{getFeatures().getArea()}} M² (Metros quadrados)
-        </p>
+            <nz-divider ></nz-divider>
+            <div class="row">
+                <div class="col">
+                    <h4>Detalhes</h4>
+                    <br />
+                    <b>Tipo de imóvel:</b> {{getFeatures().getType()}}
+                    <br />
+                    <b>Quantidade de cômodos:</b> {{getFeatures().getRooms()}}
+                    <br />
+                    <b>Tamanho:</b> {{getFeatures().getArea()}} M² (Metros quadrados)
+                </div>
+            </div>
+            <nz-divider></nz-divider>
+            <div class="row">
+                <div class="col">
+                    <h4>Endereço</h4>
+                    <br />
+                    <b>Cidade:</b> {{getSuperscription().getCity()}}
+                    <br />
+                    <b>Estado:</b> {{getSuperscription().getState()}}
+                    <br />
+                    <b>Logradouro:</b> {{getSuperscription().getAddres()}}
+                    <br />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <br />
+                    <br />
+                    <div style="overflow:hidden;width: 100%;position: relative;"><iframe width="685vw" height="440vw" src="https://maps.google.com/maps?width=700&amp;height=440&amp;hl=en&amp;q=Lissabon%2C%20Portugal+(T%C3%ADtulo)&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><div style="position: absolute;width: 80%;bottom: 10px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;text-align: center;"><small style="line-height: 1.8;font-size: 2px;background: #fff;">Powered by <a href="https://embedgooglemaps.com/it/">https://embedgooglemaps.com/it/</a> & <a href="https://rechargevodafone.co.uk">https://rechargevodafone.co.uk/vodafone-balance-check/</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><br />
+                </div>
+            </div>
         </div>
+        <div class="col" >
+            <nz-card style="width:300px;margin-top: 70px;height: 500px;">
+                Contato
+                AAAAAAAAAA
+            </nz-card>
+        </div>
+    </div>
 </div>

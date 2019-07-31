@@ -1,26 +1,18 @@
 <div class="row">
     <div *ngFor="let property of getProperties()">
         <div class="row">
-            <div class="col-xs-10" >
-                <!--<nz-card class="card" style="width: 260px;" [nzCover]="coverTemplate">
-                    <nz-card-meta id="body-card"
-                        class="meta"
-                        nzTitle="{{property.name}}"
-                        nzDescription="{{property.description}}">
-                    </nz-card-meta>
-                </nz-card>
-                <ng-template style="height:20px"  #coverTemplate>
-                    <img alt="{{property.name}}" src="{{property.photos[0].path}}"/>
-                </ng-template>-->
-                <div class="card" style="width: 260px;">
-                    <img src="{{property.photos[0].path}}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h6 style="margin-bottom: 5px;">{{property.name}}</h6>
-                      <p class="card-text">{{property.description}}</p>
-                      <p class="card-value"> <b>R${{property.value}}</b> </p>
+            <a routerLink="/property/{{property.getId()}}">
+                <div class="col-xs-10" >
+                    <div class="card" style="width: 260px;">
+                        <img src="{{property.photos[0].path}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h6 style="margin-bottom: 5px;">{{property.name}}</h6>
+                        <p class="card-text">{{property.description}}</p>
+                        <p class="card-value"> <b>R${{property.value}}</b> </p>
+                        </div>
                     </div>
-                  </div>
-            </div>   
+                </div>   
+            </a>
         </div>
     </div>
 </div>
