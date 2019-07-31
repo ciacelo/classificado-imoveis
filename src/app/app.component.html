@@ -1,14 +1,24 @@
-<nz-layout class="layout">
-    <div *ngIf="!showProfile">
-      <app-menu-initial ></app-menu-initial>
-    </div>
-    <div *ngIf="showProfile">
-      <app-menu-profile ></app-menu-profile>
-    </div>
-  <nz-content>    
-    <div class="inner-content">
-        <router-outlet></router-outlet>
-    </div>
-  </nz-content>
-  <nz-footer>Ant Design ©2019 Implement By Angular</nz-footer>
-</nz-layout>
+
+    <nz-layout class="layout">
+        <div *ngIf="!showProfile">
+          <div *ngIf="isHome">
+              <app-menu-initial ></app-menu-initial>
+          </div>
+          <div *ngIf="!isHome">
+              <app-main-menu ></app-main-menu>
+          </div>
+        </div>
+        <div *ngIf="showProfile">
+          <app-menu-profile ></app-menu-profile>
+        </div>
+      <nz-content>    
+        <div class="inner-content">
+            <router-outlet></router-outlet>
+        </div>
+        <nz-footer>
+            <div class="footer">
+              <p>HouseMarket ®corpyright</p>
+            </div>
+          </nz-footer>
+      </nz-content>
+    </nz-layout>

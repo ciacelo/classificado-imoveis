@@ -10,7 +10,7 @@
             <div class="row">
                 <div class="advertiseHeaderSection">
                     <h5 class="advertiseHeaderSectionDescription">Divulgue seu imóvel parado conosco</h5>
-                    <button class="btn btn-primary advertise">Anunciar</button>
+                    <a routerLink="my-ads"><button class="btn btn-primary advertise">Anunciar</button></a>
                 </div>
             </div>
         </div>
@@ -21,22 +21,31 @@
         </ng-template>
     </nz-divider>
     <div class="row howToUse">
+        <hr size="1" style="border:1px dashed rgb(252, 252, 252); z-index:2; flex: auto;">
         <div class="col step"> 
             <i class="fa fa-search iconHowto"></i>
             <h3 class="stepTitle">Pesquise</h3>
         </div>
+        <hr size="1" style="border:1px dashed rgb(252, 252, 252); z-index:2; flex: auto;">
         <div class="col step"> 
             <i class="fa fa-map-marked iconHowto"></i>
             <h3 class="stepTitle">Encontre</h3>
         </div>
+        <hr size="1" style="border:1px dashed rgb(252, 252, 252); z-index:2; flex: auto;">
         <div class="col step"> 
             <i class="fas fa-handshake iconHowto"></i>
             <h3 class="stepTitle">Contrate!</h3>
         </div>
+        <hr size="1" style="border:1px dashed rgb(252, 252, 252); z-index:2; flex: auto;">
     </div> 
     <div class="container">       
         <div class="section">
-            <app-find></app-find>
+            <div class="row type">
+                <h3>Descubra</h3>
+            </div>
+            <div class="row type">
+                <app-find></app-find>
+            </div>
         </div>    
         <!--Properties type-->
         <div class="section">
@@ -65,6 +74,30 @@
             </div>
         </div>   
     </div>
+    <div class="container">
+        <hr>
+    </div>
     <div class="info">
+            <div class="row spinner-text">
+                <h3>Conte conosco para anunciar</h3>
+            </div>
+            <div class="row" id="spinners" style="justify-content: center">
+                    <div class="spinner-border" role="status">
+                        <span class="sr-only">Loading...</span>
+                        <p id="spinner-info-center">230</p><p id="spinner-info-center-under">Pontos comerciais</p>
+                    </div>
+                    <div class="spinner-border" role="status">
+                        <span class="sr-only">Loadin...</span>
+                        <p id="spinner-info-center">120</p><p id="spinner-info-center-under">Casas a venda</p>
+                    </div>
+                    <div class="spinner-border" role="status">
+                        <span class="sr-only">Loading...</span>
+                        <p id="spinner-info-center">390</p><p id="spinner-info-center-under">Apartamentos a venda</p>
+                    </div>
+                    <div class="spinner-border" role="status">
+                        <span class="sr-only">Loading...</span>
+                        <p id="spinner-info-center">+200</p><p id="spinner-info-center-under">Casas e apartamentos em alugue-se</p>
+                    </div>
+            </div>
     </div>     
 </div>
