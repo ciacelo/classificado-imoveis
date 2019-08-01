@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AuthGuard } from './guard/auth.guard';
+import { PropertyService } from './service/property/property.service';
 
 const routes: Routes = [
 
