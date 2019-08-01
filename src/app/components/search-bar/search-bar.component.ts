@@ -11,8 +11,10 @@ export class SearchBarComponent implements OnInit {
 
   inputValue: string;
   optionGroups: any[];
+  value: any = null;
 
   onChange(value: any): void {
+    return this.value = value;
     console.log(value);
   }
 

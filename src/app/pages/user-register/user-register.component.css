@@ -1,11 +1,21 @@
-[nz-form] {
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5rem;
-    padding-top: 5rem;
-  }
+  
+    [nz-form] {
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 10rem;
+      padding-bottom: 10rem;
+    }
 
-  button {
-    margin-left: 8px;
-  }
+    nz-form-control {
+      text-align: -webkit-center;
+      text-align: center;
+    }
+
+    .phone-select {
+      width: 70px;
+    }
+
+    .register-are {
+      margin-bottom: 8px;
+    }

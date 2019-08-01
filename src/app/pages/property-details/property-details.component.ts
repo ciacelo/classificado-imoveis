@@ -23,6 +23,7 @@ export class PropertyDetailsComponent implements OnInit {
       this.id = parseInt(this.route.snapshot.paramMap.get("id"));
       this.property = this.propertyService.getProperty(this.id);
     }
+
   }
 
   getProperty(): Object{

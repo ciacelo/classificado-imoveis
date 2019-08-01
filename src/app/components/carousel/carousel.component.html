@@ -9,9 +9,12 @@
             <div class="carousel-item active">
                 <img src={{getPhotos()[0].path}} class="d-block w-100"  alt="...">
             </div>
+            <div class="carousel-item">
+                <img src={{getPhotos()[1].path}} class="d-block w-100"  alt="...">
+            </div>
             <div class="carousel-item" *ngFor="let photo of getPhotos()">
                 <img src={{photo.getPath()}} class="d-block w-100" alt="...">
-            </div> 
+            </div>  
           </div>
           <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
