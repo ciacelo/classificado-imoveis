@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PropertyService } from 'src/app/service/property/property.service';
+
+import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
 
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: 'login', loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule) },
   { path: 'search-form', loadChildren: () => import('./pages/search-form/search-form.module').then(m => m.SearchFormModule) },
   { path: 'property/:id', loadChildren: () => import('./pages/property-details/property-details.module').then(m => m.PropertyDetailsModule) },
-  { path: 'find', loadChildren: () => import('./components/find/find.module').then(m => m.FindModule) },
+  { path: 'find', loadChildren: () => import('./components/find/find.module').then(m => m.FindModule), canActivate: [AuthGuard] },
+  { path: 'home/my-ads', loadChildren: () => import('./components/my-ads/my-ads.module').then(m => m.MyAdsModule) },
   { path: 'ad-steps', loadChildren: () => import('./pages/ad-steps/ad-steps.module').then(m => m.AdStepsModule) },
   { path: 'user-profile', loadChildren: () => import('./pages/user-profile/user-profile.module').then(m => m.UserRegisterModule) },
   { path: 'user-favorite', loadChildren: () => import('./pages/user-favorite/user-favorite.module').then(m => m.UserFavoriteModule) },
@@ -21,9 +23,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
+
   imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
   providers: [{provide: 'PropertyService', useClass: PropertyService}],
-
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

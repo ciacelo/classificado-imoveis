@@ -3,6 +3,7 @@ export class User{
     id: number;
     name: string;
     email: string;
+    password: string;
     telefone: number;
     photos: string;
 
@@ -10,12 +11,14 @@ export class User{
     id: number,
     name: string,
     email: string,
+    password: string,
     telefone: number,
     photos: string
     ){
     this.id = id,
     this.name = name,
     this.email = email,
+    this.password = password,
     this.telefone = telefone,
     this.photos = photos;
     }
@@ -32,6 +35,12 @@ export class User{
     }
     getEmail(){
         return this.email;
+    }
+    setPassword(password: string): void{
+        this.password = password;
+    }
+    getPassword(): string{
+        return this.password;
     }
     setPhoto(photo: string): void{
         this.photos = photo;

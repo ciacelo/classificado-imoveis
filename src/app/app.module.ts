@@ -14,6 +14,10 @@ import { MenuInitialComponent } from './pages/menu-initial/menu-initial.componen
 import { MenuProfileComponent } from './pages/menu-profile/menu-profile.component';
 import { MainMenuComponent } from './pages/main-menu/main-menu.component';
 
+import { PropertyService } from 'src/app/service/property/property.service';
+import { UserService } from './service/user/user.service';
+import { AuthService } from './service/auth/auth.service';
+
 
 registerLocaleData(en);
 
@@ -35,7 +39,9 @@ registerLocaleData(en);
     HttpClientModule,
     BrowserAnimationsModule
   ],
-  providers: [{ provide: NZ_I18N, useValue: en_US }],
+  providers: [{ provide: NZ_I18N, useValue: en_US }, {provide: 'PropertyService', useClass: PropertyService}, 
+              {provide: 'UserService', useClass: UserService}, {provide: 'AuthService', useClass:AuthService}],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

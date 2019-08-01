@@ -12,11 +12,18 @@ export class PropertyService {
   properties: Property[];
 
   constructor() { 
-    this.properties = propertyMock;
+    let propertiesAux = window.localStorage.getItem('properties');
+    if(propertiesAux !== null){  
+      this.properties = JSON.parse(propertiesAux);
+      
+    }else{
+      this.properties = propertyMock;
+    }
   }
-
+  
   addProperty(property: Property): void{
     this.properties.push(property);
+    window.localStorage.setItem('properties', JSON.stringify(this.properties));
   }
 
   addPhoto(propertyId: number, photo: Photo): void{
@@ -24,6 +31,8 @@ export class PropertyService {
       if(this.properties[i].getId() === propertyId){
         let photos: Photo[] = this.properties[i].getPhoto();
         photos.push(photo);
+        this.properties[i].setPhoto(photos);
+        window.localStorage.setItem('properties', JSON.stringify(this.properties));
         break;
       }
     }
@@ -40,7 +49,6 @@ export class PropertyService {
   getProperties(){
     return this.properties;
   }
-
 
   removeProperty(id: number): void{
     for(let i=0;i<this.properties.length;i++){
