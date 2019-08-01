@@ -1,8 +1,8 @@
-<form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+<form nz-form [formGroup]="form" class="login-form" (ngSubmit)="submitForm()">
   <nz-form-item>
-    <nz-form-control nzErrorTip="Por favor insira seu usuário">
+    <nz-form-control nzErrorTip="Por favor insira seu email">
       <nz-input-group nzPrefixIcon="user">
-        <input type="text" nz-input formControlName="userName" placeholder="Usuário" />
+        <input type="email" nz-input formControlName="email" placeholder="Email" />
       </nz-input-group>
     </nz-form-control>
   </nz-form-item>
@@ -18,9 +18,8 @@
       <label nz-checkbox formControlName="remember">
         <span>Lembrar-me</span>
       </label>
-      <a class="login-form-forgot" class="login-form-forgot">Esqueci a senha</a>
       <button nz-button class="login-form-button" [nzType]="'primary'">Entrar</button>
-      Ou
+        Ou
       <a>Cadastre-se</a>
     </nz-form-control>
   </nz-form-item>
