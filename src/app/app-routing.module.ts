@@ -23,7 +23,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+
+  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
+  providers: [{provide: 'PropertyService', useClass: PropertyService}],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -9,7 +9,12 @@
           />
         </nz-input-group>
         <ng-template #suffixIcon>
-          <i nz-icon nzType="search"></i>
+          <div *ngIf="value !== null">
+            <a routerLink="/result-page"><i nz-icon nzType="search"></i></a>
+          </div>
+          <div *ngIf="value === null">
+            <i nz-icon nzType="search"></i>
+          </div>
         </ng-template>
         <nz-autocomplete #auto>
           <nz-auto-optgroup *ngFor="let group of optionGroups" [nzLabel]="groupTitle">

@@ -1,56 +1,50 @@
-<form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm(validateForm.value)">
-    <p>Página de Cadastro</p>
-    <nz-form-item>
-      <nz-form-label [nzSpan]="7" nzRequired>Nome Completo</nz-form-label>
-      <nz-form-control [nzSpan]="12" nzHasFeedback nzValidatingTip="Validating..." [nzErrorTip]="userErrorTpl">
-        <input nz-input formControlName="userName" placeholder="Digite seu nome" />
-        <ng-template #userErrorTpl let-control>
-          <ng-container *ngIf="control.hasError('required')">
-            Por favor digite seu nome!
-          </ng-container>
-        </ng-template>
-      </nz-form-control>
-    </nz-form-item>
-    <nz-form-item>
-      <nz-form-label [nzSpan]="7" nzRequired>E-mail</nz-form-label>
-      <nz-form-control [nzSpan]="12" nzHasFeedback [nzErrorTip]="emailErrorTpl">
-        <input nz-input formControlName="email" placeholder="Insira seu e-mail" type="email" />
-        <ng-template #emailErrorTpl let-control>
-          <ng-container *ngIf="control.hasError('email')">
-            O e-mail digitado não é válido!
-          </ng-container>
-          <ng-container *ngIf="control.hasError('required')">
-            Por favor insira seu e-mail!
-          </ng-container>
-        </ng-template>
-      </nz-form-control>
-    </nz-form-item>
-    <nz-form-item>
-      <nz-form-label [nzSpan]="7" nzRequired>Senha</nz-form-label>
-      <div>
-        <nz-form-control [nzSpan]="12" nzHasFeedback nzErrorTip="Por favor insira sua senha!">
-          <input nz-input type="password" formControlName="password" placeholder = "Insira sua senha" (ngModelChange)="validateConfirmPassword()" />
-        </nz-form-control>
-      </div>
-    </nz-form-item>
-    <nz-form-item>
-      <nz-form-label [nzSpan]="7" nzRequired>Confirmar senha</nz-form-label>
-      <nz-form-control [nzSpan]="12" nzHasFeedback [nzErrorTip]="passwordErrorTpl">
-        <input nz-input type="password" formControlName="confirm" placeholder="Confirme sua senha" />
-        <ng-template #passwordErrorTpl let-control>
-          <ng-container *ngIf="control.hasError('required')">
-            Por favor confirme sua senha!
-          </ng-container>
-          <ng-container *ngIf="control.hasError('confirm')">
-            As senhas não correspondem!
-          </ng-container>
-        </ng-template>
-      </nz-form-control>
-    </nz-form-item>
-    <nz-form-item>
-      <nz-form-control [nzOffset]="7" [nzSpan]="12">
-        <button nz-button nzType="primary" [disabled]="!validateForm.valid">Cadastrar</button>
-      </nz-form-control>
-    </nz-form-item>
-  </form>
+<form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+  <nz-form-item>
+    <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="email">E-mail</nz-form-label>
+    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="E-mail inválido!">
+      <input nz-input formControlName="email" id="email" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="password" nzRequired>Senha</nz-form-label>
+    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Por favor insira a senha!">
+      <input
+        nz-input
+        type="password"
+        id="password"
+        formControlName="password"
+        (ngModelChange)="updateConfirmValidator()"
+      />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="checkPassword" nzRequired>Confirme a senha</nz-form-label>
+    <nz-form-control [nzSm]="14" [nzXs]="24" [nzErrorTip]="errorTpl">
+      <input nz-input type="password" formControlName="checkPassword" id="checkPassword" />
+      <ng-template #errorTpl let-control>
+        <ng-container *ngIf="control.hasError('required')">
+          Por favor confirme a senha!
+        </ng-container>
+        <ng-container *ngIf="control.hasError('confirm')">
+          As duas senhas inseridas são inconsistentes!
+        </ng-container>
+      </ng-template>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="nickname" nzRequired>
+      <span>
+        Nome
+      </span>
+    </nz-form-label>
+    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Por favor insira o nome!">
+      <input nz-input id="nickname" formControlName="nickname" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item nz-row class="register-area">
+    <nz-form-control [nzSpan]="14" [nzOffset]="6">
+      <button nz-button nzType="primary">Registre-se</button>
+    </nz-form-control>
+  </nz-form-item>
+</form>
   
