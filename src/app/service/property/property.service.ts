@@ -12,18 +12,11 @@ export class PropertyService {
   properties: Property[];
 
   constructor() { 
-    let propertiesAux = window.localStorage.getItem('properties');
-    if(propertiesAux !== null){  
-      this.properties = JSON.parse(propertiesAux);
-      
-    }else{
-      this.properties = propertyMock;
-    }
+    this.properties = propertyMock;
   }
   
   addProperty(property: Property): void{
     this.properties.push(property);
-    window.localStorage.setItem('properties', JSON.stringify(this.properties));
   }
 
   addPhoto(propertyId: number, photo: Photo): void{
@@ -32,7 +25,6 @@ export class PropertyService {
         let photos: Photo[] = this.properties[i].getPhoto();
         photos.push(photo);
         this.properties[i].setPhoto(photos);
-        window.localStorage.setItem('properties', JSON.stringify(this.properties));
         break;
       }
     }
