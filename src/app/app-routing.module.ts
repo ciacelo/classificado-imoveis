@@ -19,8 +19,8 @@ const routes: Routes = [
   { path: 'ad-steps', loadChildren: () => import('./pages/ad-steps/ad-steps.module').then(m => m.AdStepsModule) },
   { path: 'user-profile', loadChildren: () => import('./pages/user-profile/user-profile.module').then(m => m.UserRegisterModule) },
   { path: 'user-favorite', loadChildren: () => import('./pages/user-favorite/user-favorite.module').then(m => m.UserFavoriteModule) },
-  { path: 'result-page', loadChildren: () => import('./pages/result-page/result-page.module').then(m => m.ResultPageModule) }
-
+  { path: 'result-page', loadChildren: () => import('./pages/result-page/result-page.module').then(m => m.ResultPageModule) },
+  { path: 'reform-page', loadChildren: () => import('./pages/reform-page/reform-page.module').then(m => m.ReformPageModule) }
 ];
 
 @NgModule({

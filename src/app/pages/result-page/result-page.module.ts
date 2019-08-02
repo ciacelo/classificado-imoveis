@@ -12,10 +12,11 @@ import { PropertyListModule } from 'src/app/components/property-list/property-li
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { FormsModule} from '@angular/forms';
+import { SearchBarModule } from 'src/app/components/search-bar/search-bar.module';
 
 
 @NgModule({
-    imports: [ResultPageRoutingModule,FormsModule,PropertyListModule,NzInputModule,NgZorroAntdModule,NzSelectModule,NzCardModule,NzSliderModule, NzIconModule, NzLayoutModule ,CommonModule, NzFormModule , ReactiveFormsModule],
+    imports: [ResultPageRoutingModule,FormsModule,PropertyListModule,NzInputModule,NgZorroAntdModule,NzSelectModule,NzCardModule,NzSliderModule, NzIconModule, NzLayoutModule, SearchBarModule ,CommonModule, NzFormModule , ReactiveFormsModule],
     declarations: [ResultPageComponent],
     exports: [ResultPageComponent]
   })

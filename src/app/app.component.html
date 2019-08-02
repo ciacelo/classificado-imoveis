@@ -1,6 +1,6 @@
 
     <nz-layout class="layout">
-        <div *ngIf="!showProfile">
+        <div *ngIf="showProfile">
           <div *ngIf="isHome">
               <app-menu-initial ></app-menu-initial>
           </div>
@@ -8,8 +8,13 @@
               <app-main-menu ></app-main-menu>
           </div>
         </div>
-        <div *ngIf="showProfile">
-          <app-menu-profile ></app-menu-profile>
+        <div *ngIf="!showProfile">
+            <div *ngIf="isHome">
+                <app-menu-profile ></app-menu-profile>
+            </div>
+            <div *ngIf="!isHome">
+                <app-menu-main-user></app-menu-main-user>
+            </div>
         </div>
       <nz-content>    
         <div class="inner-content">
@@ -17,17 +22,29 @@
         </div>
         <nz-footer>
             <div class="footer">
-              <div class="row">
-                <p style="font-size: 24px; color: white">Links úteis:</p>
-                <p ><a href="" style="color: white; line-height: 3; padding-left: 0.5rem;">anuncie conosco </a></p>
-                <p><a href="" style="color: white; line-height: 3; padding-left: 0.5rem;">|  Descubra: casas, apartamentos e pontos comerciais </a></p>
-              </div>
-              <div class="row" style="color: withe;">
-                <p style="color: white"> A maior parte das categorias no HouseMarket são de livre visualização. No entanto, a fim de assegurar um serviço de qualidade e segurança, algumas categorias exigem login para postar.</p>
-              </div>
-              <div class="row" style="color: withe;">
-                <p style="color: white">HouseMarket ®corpyright</p>
-              </div>
+                <div class="pure-u-1-4" style="width: 25%;">
+                    <div class="pure-s">
+                        <p class="footer-info-title" style="color: white">Informação</p>
+                        <hr>
+                        <ul>
+                            <li>
+                            <a rel="nofollow" routerLink="ad-steps" style="color: white">Anuncie aqui</a>
+                            </li>
+                            <li>
+                              <a rel="nofollow" routerLink="result-page" style="color: white">Descubra</a>
+                            </li>
+                            <li>
+                              <a rel="nofollow" routerLink="result-page" style="color: white">Casas</a>
+                            </li>
+                            <li>
+                              <a rel="nofollow" routerLink="result-page" style="color: white">Apartamentos</a>
+                            </li>
+                            <li>
+                              <a rel="nofollow" routerLink="result-page" style="color: white">Pontos comerciais</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
           </nz-footer>
       </nz-content>
