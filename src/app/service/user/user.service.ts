@@ -9,7 +9,7 @@ export class UserService {
   users: User[];
 
   constructor(){
-    this.users = UserMock;
+      this.users = UserMock;
   }
 
   addUser(user: User): void{

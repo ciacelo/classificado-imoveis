@@ -4,23 +4,23 @@ export class User{
     name: string;
     email: string;
     password: string;
-    telefone: number;
-    photos: string;
+    phone: number;
+    photo: string;
 
     constructor(
     id: number,
     name: string,
     email: string,
     password: string,
-    telefone: number,
-    photos: string
+    phone: number,
+    photo: string
     ){
     this.id = id,
     this.name = name,
     this.email = email,
     this.password = password,
-    this.telefone = telefone,
-    this.photos = photos;
+    this.phone = phone,
+    this.photo = photo;
     }
 
     setName(name:string):void{
@@ -43,16 +43,16 @@ export class User{
         return this.password;
     }
     setPhoto(photo: string): void{
-        this.photos = photo;
+        this.photo = photo;
     }
     getPhoto(){
-        return this.photos;
+        return this.photo;
     }
-    setTelefone(telefone: number):void{
-        this.telefone = telefone;
+    setTelefone(phone: number):void{
+        this.phone = phone;
     }
     getTelefone(){
-        return this.telefone
+        return this.phone
     }
     setId(id: number): void{
         this.id = id;
