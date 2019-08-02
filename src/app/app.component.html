@@ -1,6 +1,6 @@
 
     <nz-layout class="layout">
-        <div *ngIf="showProfile">
+        <div *ngIf="!showProfile">
           <div *ngIf="isHome">
               <app-menu-initial ></app-menu-initial>
           </div>
@@ -8,7 +8,7 @@
               <app-main-menu ></app-main-menu>
           </div>
         </div>
-        <div *ngIf="!showProfile">
+        <div *ngIf="showProfile">
             <div *ngIf="isHome">
                 <app-menu-profile ></app-menu-profile>
             </div>

@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'property/:id', loadChildren: () => import('./pages/property-details/property-details.module').then(m => m.PropertyDetailsModule) },
   { path: 'find', loadChildren: () => import('./components/find/find.module').then(m => m.FindModule), canActivate: [AuthGuard] },
   { path: 'result-page', loadChildren: () => import('./pages/result-page/result-page.module').then(m => m.ResultPageModule) },
-  { path: 'reform-page', loadChildren: () => import('./pages/reform-page/reform-page.module').then(m => m.ReformPageModule) }
+  { path: 'reform-page', loadChildren: () => import('./pages/reform-page/reform-page.module').then(m => m.ReformPageModule) },
   { path: 'my-ads', loadChildren: () => import('./components/my-ads/my-ads.module').then(m => m.MyAdsModule), canActivate: [AuthGuard]  },
   { path: 'ad-steps', loadChildren: () => import('./pages/ad-steps/ad-steps.module').then(m => m.AdStepsModule), canActivate: [AuthGuard] },
   { path: 'user-profile', loadChildren: () => import('./pages/user-profile/user-profile.module').then(m => m.UserRegisterModule), canActivate: [AuthGuard] },
