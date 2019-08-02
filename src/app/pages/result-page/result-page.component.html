@@ -36,6 +36,9 @@
         </nz-sider>
         <nz-layout class="inner-layout">
           <nz-breadcrumb>
+            <div class="container" style="width:23rem;">
+              <app-search-bar (getSearchValue)="search($event)"></app-search-bar>
+            </div>
             <nz-breadcrumb-item style="font-size:20px; color:black;">Resultados</nz-breadcrumb-item>
           </nz-breadcrumb>
           <nz-content>
@@ -57,8 +60,7 @@
           </form>          
           <div class = "row">
               <div class="row type">
-                  <app-property-list limit=4 [properties]="getProperties()"></app-property-list>
-               
+                  <app-property-list [properties]="getProperties()"></app-property-list>
             </div>
           </div>
           </nz-content>         

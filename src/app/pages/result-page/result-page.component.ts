@@ -25,11 +25,17 @@ export class ResultPageComponent implements OnInit {
 getProperties(): Property[]{
   return this.propertyService.getProperties();
 }
+
+
 submitForm(): void {
   for (const i in this.validateForm.controls) {
     this.validateForm.controls[i].markAsDirty();
     this.validateForm.controls[i].updateValueAndValidity();
   }
+}
+
+search(event: Event): void{
+  console.log(event);
 }
 
 genderChange(value: string): void {

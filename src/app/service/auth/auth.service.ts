@@ -12,10 +12,7 @@ export class AuthService {
 
   constructor(@Inject('UserService') private userService: UserService){
     this.users = this.userService.getUsers();
-    let userAux = JSON.parse(window.localStorage.getItem('user'));
-    if(userAux !== null){
-      this.user = new User(userAux.id, userAux.name, userAux.email, userAux.password, userAux.telefone, userAux.photos);
-    }
+    this.user = JSON.parse(window.localStorage.getItem('user'));
   }
   
   login(email: string, password: string): boolean{

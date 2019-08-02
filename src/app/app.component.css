@@ -47,3 +47,26 @@ nz-footer {
   background: #007bff;
   text-align: center;
 }
+
+.footer-info-title {
+  font-size: 15px;
+    line-height: 24.27050985px;
+    font-family: "Merriweather Sans",Arial,Helvetica,sans-serif;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.pure-s ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  list-style: none;
+  text-align: left;
+}
+
+.footer-info-title ul li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
