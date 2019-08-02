@@ -13,7 +13,7 @@ import en from '@angular/common/locales/en';
 import { MenuInitialComponent } from './pages/menu-initial/menu-initial.component';
 import { MenuProfileComponent } from './pages/menu-profile/menu-profile.component';
 import { MainMenuComponent } from './pages/main-menu/main-menu.component';
-
+import { MenuMainUserComponent } from './pages/menu-main-user/menu-main-user.component';
 import { PropertyService } from 'src/app/service/property/property.service';
 import { UserService } from './service/user/user.service';
 import { AuthService } from './service/auth/auth.service';
@@ -26,7 +26,8 @@ registerLocaleData(en);
     AppComponent,
     MenuInitialComponent,
     MenuProfileComponent,
-    MainMenuComponent
+    MainMenuComponent,
+    MenuMainUserComponent
   ],
   imports: [
     CommonModule,

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation  } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter  } from '@angular/core';
 
 @Component({
   selector: 'app-search-bar',
@@ -9,13 +9,15 @@ import { ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation  } from '
 })
 export class SearchBarComponent implements OnInit {
 
+  @Output() getSearchValue = new EventEmitter();
+
   inputValue: string;
   optionGroups: any[];
   value: any = null;
 
   onChange(value: any): void {
-    return this.value = value;
-    console.log(value);
+    this.value = value;
+    this.getSearchValue.emit(value);
   }
 
   ngOnInit(): void {
@@ -54,4 +56,5 @@ export class SearchBarComponent implements OnInit {
       ];
     }, 1000);
   }
+
 }
