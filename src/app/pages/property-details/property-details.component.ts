@@ -4,6 +4,9 @@ import { Inject } from '@angular/core';
 import { PropertyService } from 'src/app/service/property/property.service';
 import { isNumber } from 'util';
 import { Property } from 'src/app/service/property/property';
+import { Superscription } from 'src/app/service/property/superscription';
+import { Features } from 'src/app/service/property/features';
+import { Photo } from 'src/app/service/property/photo';
 
 @Component({
   selector: 'app-property-details',
@@ -26,19 +29,19 @@ export class PropertyDetailsComponent implements OnInit {
 
   }
 
-  getProperty(): Object{
+  getProperty(): Property{
     return this.property;
   }
 
-  getSuperscription(): Object{
+  getSuperscription(): Superscription{
     return this.property.getSuperscription();
   }
 
-  getFeatures(): Object{
+  getFeatures(): Features{
     return this.property.getFeatures();
   }
 
-  getPhotos(): Object[]{
+  getPhotos(): Photo[]{
     return this.property.getPhoto();
   }
 }

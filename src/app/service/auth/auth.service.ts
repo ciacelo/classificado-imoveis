@@ -31,7 +31,7 @@ export class AuthService {
   } 
 
   isAuthenticated(): boolean{
-    if(typeof this.user !== 'undefined'){
+    if( this.user !== null){
       return true;
     }
     return false;

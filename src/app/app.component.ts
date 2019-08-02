@@ -1,5 +1,6 @@
-import { Component, SimpleChanges } from '@angular/core';
+import { Component, SimpleChanges, Inject } from '@angular/core';
 import { ActivatedRoute, Router, NavigationStart } from '@angular/router';
+import { AuthService } from './service/auth/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -11,10 +12,9 @@ export class AppComponent {
   showProfile = false;
   isHome = false;
 
-  constructor(private router: Router){
+  constructor(private router: Router, @Inject('AuthService') private authService: AuthService){
     router.events.subscribe((val)=>{
       if(val instanceof NavigationStart){
-        console.log(val.url)
         if(val.url.toLocaleLowerCase() === '/home' || 
             val.url.toLocaleLowerCase() === '/' || 
             val.url.toLocaleLowerCase() === '/#'){
@@ -22,6 +22,8 @@ export class AppComponent {
         }else{
           this.isHome = false;
         }
+
+        this.showProfile = this.authService.isAuthenticated();
       }
     })
     
